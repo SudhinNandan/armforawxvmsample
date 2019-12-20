@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: Create a windows web app with non-exist app service plan
+      azure_rm_webapp:
+        resource_group: myResourceGroup
+        name: myWinWebapp
+        plan:
+          resource_group: myAppServicePlan_rg
+          name: myAppServicePlan
+          is_linux: false
+          sku: S1
