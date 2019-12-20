@@ -2,10 +2,11 @@
   tasks:
     - name: Create a windows web app with non-exist app service plan
       azure_rm_webapp:
-        resource_group: myResourceGroup
-        name: myWinWebapp
+        subscription_id: da9510b8-3397-4012-a20c-328a1b93c19e
+        resource_group: devopscle
+        name: WinWebapp
         plan:
-          resource_group: myAppServicePlan_rg
-          name: myAppServicePlan
+          resource_group: devopscle
+          name: winAppServicePlan
           is_linux: false
           sku: S1
